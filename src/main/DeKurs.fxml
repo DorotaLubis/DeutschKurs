@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="lessons1Button" minWidth="70.0" mnemonicParsing="false" text="Lekcja 1" />
+            <Button fx:id="lessons2Button" minWidth="70.0" mnemonicParsing="false" prefHeight="26.0" text="Lekcja 2" />
+            <Button fx:id="lessons3Button" minWidth="70.0" mnemonicParsing="false" text="Lekcja 3" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 4" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 5" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 6" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 7" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 8" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 9" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 10" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 11" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 12" />
+            <Button disable="true" minWidth="70.0" mnemonicParsing="false" text="Lekcja 13" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <Label fx:id="lessonTitleLabel" prefHeight="34.0" prefWidth="410.0" text="Lekcja" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox prefHeight="329.0" prefWidth="490.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="germanPhraseLabel" prefHeight="38.0" prefWidth="431.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <TextField id="userAnswer" fx:id="userAnswerTextField" maxWidth="400.0" prefHeight="26.0" prefWidth="400.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="okButton" mnemonicParsing="false" text="OK">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <AnchorPane maxWidth="200.0" prefHeight="82.0" prefWidth="72.0">
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+               <children>
+                  <VBox layoutX="162.0" prefHeight="76.8" prefWidth="25.0">
+                     <children>
+                        <Button fx:id="bigAButton" mnemonicParsing="false" prefWidth="25.0" text="Ä" />
+                        <Button fx:id="bigOButton" mnemonicParsing="false" prefWidth="25.0" text="Ö" />
+                        <Button fx:id="bigUButton" mnemonicParsing="false" prefWidth="25.0" text="Ü" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="129.0" prefHeight="76.8" prefWidth="25.0">
+                     <children>
+                        <Button fx:id="aButton" mnemonicParsing="false" prefWidth="25.0" text="ä" />
+                        <Button fx:id="oButton" mnemonicParsing="false" prefWidth="25.0" text="ö" />
+                        <Button fx:id="uButton" mnemonicParsing="false" prefWidth="25.0" text="ü" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="97.0" prefHeight="76.8" prefWidth="25.0">
+                     <children>
+                        <Button fx:id="ssButton" mnemonicParsing="false" prefWidth="25.0" text="ß" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Label fx:id="goodOrWrongAnsLabel" prefHeight="18.0" prefWidth="278.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="correctAnsLabel" prefHeight="18.0" prefWidth="378.0" textFill="RED">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="60.0" prefWidth="490.0">
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Dobrze: " />
+                  <Label fx:id="numberOfGoodAnswerLabel" text="0" />
+                  <Label text="Źle: ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="numberOfWrongAnswerLabel" text="0" />
+                  <Label text="Wynik: ">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="scoreLabel" text="0%" />
+                  <ProgressBar fx:id="mainBar" prefWidth="200.0" progress="0.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
